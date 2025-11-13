@@ -3,7 +3,7 @@
 Authentication and authorization are enabled.
 TLS for the transport and HTTP layers is enabled and configured.
 
-The generated password for the elastic built-in superuser is : _pAw2k+1EmRZ7ZU0TX39
+The generated password for the elastic built-in superuser is : yHOMYB=TVkpCvIorX7+C
 
 If this node should join an existing cluster, you can reconfigure this with
 '/usr/share/elasticsearch/bin/elasticsearch-reconfigure-node --enrollment-token <token-here>'
@@ -21,3 +21,8 @@ Generate an enrollment token for Elasticsearch nodes with
 '/usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s node'.
 
 -------------------------------------------------------------------------------------------------
+### NOT starting on installation, please execute the following statements to configure elasticsearch service to start automatically using systemd
+ sudo systemctl daemon-reload
+ sudo systemctl enable elasticsearch.service
+### You can start elasticsearch service by executing
+ sudo systemctl start elasticsearch.service
